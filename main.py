@@ -26,10 +26,10 @@ def get_letter():
     try:
         char = input("Enter a letter: ")
         if not char.isalpha() or len(char) != 1:
-            raise TypeError("Error: A single character only")
+            raise TypeError("Error: Incorrect input")
         return char
     except TypeError:
-        print("Test Error")
+        print("Error: Only a single character - no numbers/symbols")
         get_letter()
 
 
