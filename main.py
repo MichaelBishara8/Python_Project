@@ -19,6 +19,7 @@ def main():
                     hidden_word[word.index(i)] = char
         else:
             print("Nope, try again! XXX")
+    print("Congrats!")
 
 
 def get_letter():
