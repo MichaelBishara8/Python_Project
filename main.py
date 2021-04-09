@@ -10,7 +10,7 @@ def main():
     print("Welcome to HangMan! ಠ_ಠ")
 
     while hidden_word != word:
-        print(hidden_word)
+        print_list(hidden_word)
         char = get_letter()
 
         if char in word:
@@ -32,4 +32,12 @@ def get_letter():
         get_letter()
 
 
+def print_list(word_list):
+    print(''.join(word_list))
+
+
 main()
+
+# todo Check repeated letters
+# todo Scoreboard/players?
+# todo other exceptions to catch
