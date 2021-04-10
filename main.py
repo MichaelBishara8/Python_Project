@@ -45,7 +45,5 @@ def print_list(word_list):
 
 main()
 
-# todo Check repeated letters
 # todo Scoreboard/players?
 # todo other exceptions to catch
-# todo Capital letters
