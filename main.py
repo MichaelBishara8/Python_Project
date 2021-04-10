@@ -12,14 +12,12 @@ def main():
     while hidden_word != word:
         print_list(hidden_word)
         char = get_letter()
-
         if char in word:
-            for i in word:
-                if i == char:
-                    # index only affecting first value
-                    hidden_word[word.index(i)] = char
+            for i, hidden_letter in enumerate(word):
+                if hidden_letter == char:
+                    hidden_word[i] = char
         else:
-            print("Nope, try again! XXX")
+            print("Nope, try again! XXXabc")
     print("Congrats!")
 
 
@@ -40,7 +38,7 @@ def print_list(word_list):
 
 main()
 
-# todo "Computation" two Ts can't be input
+
 # todo Check repeated letters
 # todo Scoreboard/players?
 # todo other exceptions to catch
