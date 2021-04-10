@@ -16,6 +16,7 @@ def main():
         if char in word:
             for i in word:
                 if i == char:
+                    # index only affecting first value
                     hidden_word[word.index(i)] = char
         else:
             print("Nope, try again! XXX")
@@ -39,6 +40,7 @@ def print_list(word_list):
 
 main()
 
+# todo "Computation" two Ts can't be input
 # todo Check repeated letters
 # todo Scoreboard/players?
 # todo other exceptions to catch
