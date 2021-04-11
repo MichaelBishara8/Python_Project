@@ -1,5 +1,6 @@
 import random as rnd
 
+# Is a global list acceptable?
 words = ["python", "media", "computation", "science"]
 
 
@@ -37,13 +38,18 @@ def get_letter():
     except TypeError:
         print("Error: Only a single character - no numbers/symbols")
         get_letter()
+    #except Exception("Error")
+    # Too broad? Can there be more than TypeError()?
+    # (Add raise if implemented)
+
 
 # Joins the word as a list into a string
 def print_list(word_list):
     print(''.join(word_list))
 
 
-main()
+if __name__ == "__main__":
+    main()
 
 # todo Scoreboard/players?
 # todo other exceptions to catch
