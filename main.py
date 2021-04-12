@@ -52,4 +52,5 @@ if __name__ == "__main__":
     main()
 
 # todo Scoreboard/players?
+# todo Solve all at once
 # todo other exceptions to catch
