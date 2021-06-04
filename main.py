@@ -28,7 +28,10 @@ def main():
     print("Congrats! The word was:", ''.join(word).capitalize() + '!')
 
 
-# Tests the letter is alpha, a single character and makes it lowercase, otherwise it asks to re-enter
+# Tests the letter is alpha, a single character and makes it lowercase,
+# otherwise it asks to re-enter
+
+# Requests input and tests that it is alphabetical and singular then returns a lowercase char
 def get_letter():
     try:
         char = input("Enter a letter: ")
@@ -40,7 +43,7 @@ def get_letter():
         get_letter()
 
 
-# Joins the word as a list into a string
+# Prints the list as a string
 def print_list(word_list):
     print(''.join(word_list))
 
