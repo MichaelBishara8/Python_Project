@@ -1,24 +1,26 @@
 import random as rnd
 
-# Is a global list acceptable?
+# Global list alternative?
 words = ["python", "media", "computation", "science"]
 
 
 def main():
-    # Randomizes word choice from words list
+    # Randomly chooses a word
     word = list(rnd.choice(words))
+    # Word is hidden, underscores are a clue to how many letters
     hidden_word = list(("_" * len(word)))
 
     print("Welcome to HangMan! ಠ_ಠ")
 
+    # Loop will continue till solved
     while hidden_word != word:
         print_list(hidden_word)
         char = get_letter()
-        # check for repeated words
+        # check for repeated letters
         if char in hidden_word:
             print(char, "has already been entered!")
             continue
-        # Entering the letter in the mystery word
+        # Updates hidden_word with correct char for all occurrences
         elif char in word:
             for i, hidden_letter in enumerate(word):
                 if hidden_letter == char:
@@ -38,9 +40,6 @@ def get_letter():
     except TypeError:
         print("Error: Only a single character - no numbers/symbols")
         get_letter()
-    #except Exception("Error")
-    # Too broad? Can there be more than TypeError()?
-    # (Add raise if implemented)
 
 
 # Joins the word as a list into a string
@@ -51,6 +50,7 @@ def print_list(word_list):
 if __name__ == "__main__":
     main()
 
-# todo Scoreboard/players?
+# get_letter() should be smaller [Coupling and cohesion]
+
 # todo Solve all at once
 # todo other exceptions to catch
