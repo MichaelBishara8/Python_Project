@@ -1,10 +1,8 @@
 import random as rnd
 
-# Global list alternative?
-words = ["python", "media", "computation", "science"]
-
 
 def main():
+    words = ["python", "media", "computation", "science"]
     # Randomly chooses a word
     word = list(rnd.choice(words))
     # Word is hidden, underscores are a clue to how many letters
