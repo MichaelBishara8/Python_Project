@@ -1,2 +1,2 @@
 # proj
-Media Computation Project
+Media Computation Project - Basic Hangman
